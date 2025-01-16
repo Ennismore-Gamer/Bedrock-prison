@@ -1,0 +1,20 @@
+# Bedrock Parkour Prison Setup
+
+# Step 1: Create Parkour Course (bedrock blocks)
+# You can customize the following coordinates to create your own parkour course
+# This will generate the parkour course with bedrock platforms at different heights
+
+/setblock ~ ~10 ~ minecraft:bedrock
+/setblock ~ ~12 ~ minecraft:bedrock
+/setblock ~ ~14 ~ minecraft:bedrock
+/setblock ~ ~16 ~ minecraft:bedrock
+/setblock ~ ~18 ~ minecraft:bedrock
+/setblock ~ ~20 ~ minecraft:bedrock
+#set more blocks for a longer course
+
+# Step 2: Teleport to Prison if Player Falls Below Y=8
+# If a player falls off the parkour course and goes below Y=8, they will be teleported to the prison
+
+/execute as @a[y=-100..8] at @s run tp @s[distance=..5] <x> <y> <z> # Replace <x>, <y>, <z> with the coordinates of your prison room
+
+# Step 3:
